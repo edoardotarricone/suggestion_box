@@ -9,10 +9,11 @@
     <title>Home | Suggestion Box</title>
 </head>
 
-<body  ng-app="SuggestionBox" ng-controller="HomeController" ng-repeat="post in posts">
-    <p>{{post.title}}</p>
-    <p>{{post.upvotes}}</p>
-    
+<body  ng-app="SuggestionBox" ng-controller="HomeController">
+	<div  ng-repeat="post in posts">
+    		<p>{{post.title}}</p>
+    		<p>{{post.upvotes}}</p>
+    	</div>
 
 
 
