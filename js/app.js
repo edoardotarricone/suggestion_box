@@ -1,14 +1,12 @@
 var app = angular.module('SuggestionBox', ['ngRoute']);
 app.config(function ($routeProvider) {
-  $routeProvider .when('/', {
+  $routeProvider.when('/', {
     controller: 'HomeController',
     templateUrl: 'views/home.html'
-  })
-  .when('/suggestion/:id', {
+  }).when('/suggestion/:id', {
     controller: 'SuggestionController',
     templateUrl: 'views/suggestion.html'
-  })
-  .otherwise({
+  }).otherwise({
     templateUrl: '/'
   });
 });
