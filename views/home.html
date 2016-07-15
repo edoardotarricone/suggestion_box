@@ -3,6 +3,7 @@
     <p>
     <a ng-click="upVote(post)"><span class="glyphicon glyphicon-plus-sign"></span></a> Upvotes: {{post.upvotes}}
     </p>
+    <a href="#/suggestion/{{$index}}">Comments</a>
 </div>
 <form ng-submit="addSuggestion()" style="margin-top: 50px">
 		<h3> Submit Your Suggestion </h3>
