@@ -3,7 +3,12 @@ app.config(function ($routeProvider) {
   $routeProvider .when('/', {
     controller: 'HomeController',
     templateUrl: 'views/home.html'
-  }).otherwise({
+  })
+  .when('/suggestion/:id', {
+    controller: 'SuggestionController',
+    templateUrl: 'views/suggestion.html'
+  })
+  .otherwise({
     templateUrl: '/'
   });
 });
