@@ -6,7 +6,7 @@ app.config(function ($routeProvider) {
   })
   .when('/suggestion/:id', {
     controller: 'SuggestionController',
-    templateUrl: 'views/suggestions.html'
+    templateUrl: 'views/suggestion.html'
   })
   .otherwise({
     templateUrl: '/'
