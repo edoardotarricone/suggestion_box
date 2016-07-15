@@ -1,0 +1,17 @@
+<h1>{{post.title}}</h1>
+
+<div ng-if="post.comments.length === 0">
+  <p>There are no comments yet!</p>
+</div>
+
+<div ng-repeat="post.comment in post.comments | orderBy:'-upVotes'">
+  <h1>Comment.body</h1>
+</div>
+
+<form ng-submit="addComment()">
+  <h2>Add a comment</h2>
+  <div class="form-group">
+        <input type="text" class="form-control" placeholder="Comment" ng-model="body"></input>
+  </div>
+  <button type="submit" class="btn btn-primary">Comment</button>
+</form>
