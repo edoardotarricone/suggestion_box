@@ -9,7 +9,7 @@ app.controller('SuggestionController', [
         return;
         };
         
-        $scope.posts.comments.push({
+        $scope.post.comments.push({
           body: $scope.body,
           upvotes: 0
         )};
