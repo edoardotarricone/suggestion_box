@@ -6,7 +6,7 @@
 
 <div ng-repeat="comment in post.comments | orderBy:'-upVotes'">
   <p>
-    <a ng-click="upVote(post)"><span class="glyphicon glyphicon-plus-sign"></span></a> Upvotes: {{post.upvotes}}
+    <a ng-click="upVote(post)"><span class="glyphicon glyphicon-plus-sign"></span></a> Upvotes: {{comment.upvotes}}
   </p>
   
   <h1>{{comment.body}}</h1>
