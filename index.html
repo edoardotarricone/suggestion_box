@@ -16,8 +16,58 @@
 </head>
 
 <body  ng-app="SuggestionBox">
-
-<div ng-view></div>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">suggestion box</a>
+			</div>
+			<div class="navbar navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"</a></li>
+					<li><form class="form-horizontal" role="form"><div class="form-group"><input type="text" class="form-control" ng-model="searchText" placeholder="Search a suggestion..."></div></form></li>
+				</ul>
+				<ul class="nav navbar-nav pull-right">
+                			<li class="active"><a href="#">Sign in</a></li>
+                			<li><a data-toggle="modal" data-target="#loginModal" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-xs modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Login </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <label for="user-email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="user-email" name="user-email" placeholder="email@example.com">
+                        <label for="user-password" class="sr-only" style="margin-left: 5px; margin-right: 5px;">Password:</label>
+                            <input type="password" class="form-control" id="user-password" name="user-password" placeholder="password">
+                        <input type="checkbox">Remember me</div>
+                        <button type="submit" class="btn btn-info btn-sm btn-lg">Sign in</button>
+                        <button type="button" class="btn btn-default btn-sm btn-lg"
+                       data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="jumbotron">
+    	<div class="container">
+    		<div ng-view></div>
+    	</div>
+    </div>
 
 	<!-- js needed for bootstrap responsive content -->
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
