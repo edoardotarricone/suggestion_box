@@ -17,7 +17,7 @@ app.controller('SuggestionController', [
         $scope.body = "";
       };
       $scope.upVote = function(comment){
-        comment.upVotes += 1;
+        comment.upvotes += 1;
       };
   }
 ]);
