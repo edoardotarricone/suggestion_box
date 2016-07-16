@@ -12,7 +12,7 @@ app.controller('SuggestionController', [
         $scope.post.comments.push({
           body: $scope.body,
           upvotes: 0
-        )};
+        });
         
         $scope.body = "";
       };
