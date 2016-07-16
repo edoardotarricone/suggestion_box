@@ -1,4 +1,4 @@
-<div  ng-repeat="post in posts | orderBy: '-upvotes' filter: 'serchText' ">
+<div  ng-repeat="post in posts | orderBy: '-upvotes' ">
     <p>{{post.title}}</p>
     <p>
     <a ng-click="upVote(post)"><span class="glyphicon glyphicon-plus-sign"></span></a> Upvotes: {{post.upvotes}}
